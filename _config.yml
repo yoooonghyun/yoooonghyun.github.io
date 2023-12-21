@@ -61,6 +61,7 @@ google_analytics:
 #
 theme_mode: # [light|dark]
 
+
 math: true
 
 # The CDN endpoint for images.
