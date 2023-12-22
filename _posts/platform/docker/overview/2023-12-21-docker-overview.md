@@ -11,7 +11,7 @@ Docker는 container라는 형태로 software를 감쌈으로써 OS-level virtual
 
 패키징된 container는 docker가 설치된 Linux, Windows, MacOS의 운영체제에서 실행이 가능하다. 또한 on-premise, public / private cloud와 같은 다양한 환경에서 동작한다. Linux를 기준으로 docker는 자체적인 component인 libcontainer와 Linux kernel에서 지원하는 libvirt / LXC / systemd-nspawn을 통해 가상화를 지원한다. 
 
-![Manifest File for DASH](/assets/img/post/streaming_overview/dash-manifest.png)
+![Docker & Hypervisor](/assets/img/post/docker/overview/docker-vm.png)
 _Fig. 0: Docker & Hypervisor [1]_
 
 Container와 VM(Virtual Machine)은 모두 resource의 독립과 할당에 대해 장점을 갖지만, Pic. 0에 묘사되 다른 동작 방식을 갖는다. [1]

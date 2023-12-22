@@ -30,14 +30,14 @@ HLS는 미디어 데이터를 담고있는 segment 파일과, segment를 관리�
 
 HLS 형태의 streaming이 가능해진 이유는 HTML5의 MSE (Media Source Extension)가 등장했기 때문이. MSE는 브라우저의 video tag를 통해서 미디어를 재생할때, source의 추가 동작을 구현할 수 있도록 확장시켜주는 표준이다.
 
-![Playlist File for HLS](/assets/img/post/streaming_overview/hls-playlist.png)
+![Playlist File for HLS](/assets/img/post/multimedia_protocol/streaming_overview/hls-playlist.png)
 _Fig. 0: Playlist File for HLS_
 
 ## MPEG-DASH (MPEG Dynamic Adaptive Streaming over HTTP)
 
 DASH또한 adaptive HTTP streaming 기술 중 하나로, HLS와 같이 segment와 Fig. 1과 같은 segment를 관리할 playlist (manifest)를 둔다. 그러나 DASH는 playlist로써 xml 형태의 manifest 파일을 두고, segment로는 webm과 fmp4 컨테이너를 사용한다. 하지만 초창기 HLS에서 ts를 segment로 사용했기 때문에 다양한 codec의 파일을 제공할 수 없었다. 따라서 DASH의 manifest파일은 mpd 확장자를 가진다. HLS의 playlist와 비교했을 때 확장하기 쉬다. 또한 재생시간이 증가함에따라 segment가 계속 늘어난다 해도, manifest파일은 무한히 길어지지 않는다.
 
-![Manifest File for DASH](/assets/img/post/streaming_overview/dash-manifest.png)
+![Manifest File for DASH](/assets/img/post/multimedia_protocol/streaming_overview/dash-manifest.png)
 _Fig. 0: Manifest File for DASH_
 
 ## CMAF (Common Media Application Format)
