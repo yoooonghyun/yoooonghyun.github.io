@@ -5,6 +5,7 @@ date: 2019-12-20 14:10:00 +0800
 categories: [Libraries, FFmpeg]
 tags: [ffmpeg]
 render_with_liquid: false
+pin: true
 ---
 
 FFmpeg에서 Decoding와 Encoding을 지원하는 codec 구현이 있다. 외부 libopus / libvpx / libx264 와 같은 외부 lib을 이용하는 경우도 있으며, 자체 구현된 codec도 존재한다. Codec과 관련된 코드가 모두 포함되어 있기 때문에 FFmpeg source중 가장 방대하다. 
