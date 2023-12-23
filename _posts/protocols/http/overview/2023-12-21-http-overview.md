@@ -1,9 +1,9 @@
 ---
-title: HTTP
+title: Overview (HTTP)
 author: YonghyunCho
 date: 2019-12-21 14:10:00 +0800
-categories: [Protocols]
-tags: [protocol]
+categories: [Protocols, HTTP]
+tags: [protocol, http]
 render_with_liquid: false
 pin: true
 ---
@@ -13,7 +13,7 @@ pin: true
 HTTP는 web상의 데이터 통신을 위해 hypertext를 전달하는 protocol이다.  Server-client 구조로 동작하며, Application layer에 속한다. 일반적으로 client side에서 요청을 보내면 server side에서 응답을 보내는 형태로 동작한다.
 
 
-![HTTP-Based System](/assets/img/post/protocol/http/http-based-system.png)
+![HTTP-Based System](/assets/img/post/protocol/http/overview/http-based-system.png)
 _Fig. 0: HTTP-Based System [0]_
 
 ## HTTP 0.9 (1991)
@@ -95,7 +95,7 @@ SPDY안에 구현되었던 내용들이 HTTP 표준으로 편입
 - PUSH_PROMISE: Server push 기능
 - GOAWAY: Connection의 종료
 
-![Message / Frame of HTTP](/assets/img/post/protocol/http/message-frame.png)
+![Message / Frame of HTTP](/assets/img/post/protocol/http/overview/message-frame.png)
 _Fig. 1: Message / Frame of HTTP [1]_
 
 ### Connection/Stream
@@ -112,7 +112,7 @@ HPACK 헤더 압축을 통한 오버헤드 감소. Cookie 별도로 처리.
 - Static table: 자주 쓰는 header 미리 할당
 - Dynamic table: static table에 없는 header 저장
 
-![Static Table in HPACK](/assets/img/post/protocol/http/hpack-static-table.png)
+![Static Table in HPACK](/assets/img/post/protocol/http/overview/hpack-static-table.png)
 _Fig. 2: Static Table in HPACK [6]_
 
 ### Secure
@@ -131,7 +131,7 @@ PUSH_PROMISE Frame을 이용하여, client의 요청 없이 서버에서 전송�
 
 기존 TCP/IP 위에 TLS를 이용한 암호화 방식인 HTTP대신 UDP 위에 DTLS를 올린  통신 방식. Multiplexing 지원을 통해 HTTP 안에서 발생하는 head-of-line bloking은 해결되었으나, TCP 레이어에서 발생하는 문제는 해결 불가능했다. 하지만 UDP기반의 통신을 하지만 신뢰성은 software 레벨에서 보장하여 이를 해결했다.
 
-![HTTP Network Layers](/assets/img/post/protocol/http/http-layer.png)
+![HTTP Network Layers](/assets/img/post/protocol/http/overview/http-layer.png)
 _Fig. 3: HTTP Network Layers_
 
 ### Connection
@@ -139,12 +139,12 @@ _Fig. 3: HTTP Network Layers_
 QUIC Transport의 또다른 특징은 connection이 간결한 커넥션 과정이다. 기존 TLS v1.2를 사용하는 HTTP2는 연결과정을 수행하는데 총 3 RTT가 필요하다.
 TLS v1.3이 지원되면서 HTTPS 연결은 2.5 RTT로 줄었으며, client에서 TLS Finished를 보내면서 동시에 요청을 보냄으로써 server의 최초 응답을 받기까지 1 RTT 만큼의 통신을 감소시켰다.
 
-![Handshake Processes of HTTP2](/assets/img/post/protocol/http/http2-handshake.png)
+![Handshake Processes of HTTP2](/assets/img/post/protocol/http/overview/http2-handshake.png)
 _Fig. 4: Handshake Processes of HTTP2_
 
 QUIC에서는 UDP를 사용함으로써 TCP에서 필요한 3 way handshake 과정이 없어졌다. 따라서 연결 과정에서 1 RTT만큼의 이득을 볼 수 있다. Client가 이미 교환된 key를 클라이언트가 가지고 있고, 이를 재연결시에 사용한다면 TLS v1.3의 handshake는 1 RTT 까지 줄어들 수 있다. 이때 handshake과정에서 HTTP payload를 전달함으로써 handshake 과정은 0 RTT로 수렴한다.
 
-![Handshake Processes of HTTP3](/assets/img/post/protocol/http/http3-handshake.png)
+![Handshake Processes of HTTP3](/assets/img/post/protocol/http/overview/http3-handshake.png)
 _Fig. 5: Handshake Processes of HTTP3_
 
 # References

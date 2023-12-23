@@ -5,6 +5,7 @@ date: 2019-12-20 14:10:00 +0800
 categories: [Libraries, OWT]
 tags: [owt]
 render_with_liquid: false
+order: 2
 ---
 
 OWT (Open Webrtc Toolkit)의 내부 통신에는 process / server간의 RPC (Remote Procedure Call) 통신과, Media data교환을 위한 InternalConnection 두 가지 종류가 있다.

@@ -5,6 +5,7 @@ date: 2019-12-20 14:10:00 +0800
 categories: [Libraries, OWT]
 tags: [owt]
 render_with_liquid: false
+order: 3
 ---
 
 ManagementApi / Portal / ConferenceAgent는 사용자에 API를 내주거나 room, participant, stream을 관리하는 등 OWT를 제어하는 역할을 한다. ControlAgent라는 단어가 OWT에서 사용된 단어는 아니지만, 세  agent가 긴밀하게 통신하며 OWT를 제어하기 때문에 ControlAgent라는 카테고리로 분류했다.
