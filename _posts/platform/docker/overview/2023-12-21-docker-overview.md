@@ -2,8 +2,8 @@
 title: Overview (Docker)
 author: YonghyunCho
 date: 2019-12-20 14:10:00 +0800
-categories: [Platform, Docker]
-tags: [platform, docker]
+categories: [Platforms, Docker]
+tags: [docker]
 render_with_liquid: false
 ---
 
@@ -14,7 +14,7 @@ Docker는 container라는 형태로 software를 감쌈으로써 OS-level virtual
 ![Docker & Hypervisor](/assets/img/post/docker/overview/docker-vm.png)
 _Fig. 0: Docker & Hypervisor [1]_
 
-Container와 VM(Virtual Machine)은 모두 resource의 독립과 할당에 대해 장점을 갖지만, Pic. 0에 묘사되 다른 동작 방식을 갖는다. [1]
+Container와 VM(Virtual Machine)은 모두 resource의 독립과 할당에 대해 장점을 갖지만, Fig. 0에 묘사되 다른 동작 방식을 갖는다. [1]
 
 - Container는 app layer를 추상화 하며, code와 dependency를 포함한다. 여러 Container는 같은 OS kernel과 기기를 공유한다. 따라서 Container는 VM에 비해 적은 공간을 필요로 하며, 더 많은 Container를 동작할 수 있다.
 - Virtual Machine은 physical hardware를 추상화한다. Hypervisor는 하나의 기기위에 여러 VM을 동작하도록 허용한다. VM 안에는 OS가 각각 존재하기 때문에 많은 공간을 차지한다.
