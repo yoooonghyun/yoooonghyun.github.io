@@ -69,7 +69,7 @@ math: true
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: "http://localhost:4000"
+img_cdn: "https://yoooonghyun.github.io"
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "/assets/img/common/logo.png"
