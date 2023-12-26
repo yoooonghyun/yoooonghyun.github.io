@@ -1,7 +1,6 @@
 ---
 title: Overview (SIP)
-author: YonghyunCho
-date: 2019-12-21 14:10:00 +0800
+date: 2023-12-25 14:10:00 +0800
 categories: [Protocols, SIP]
 tags: [protocol, sip]
 render_with_liquid: false
@@ -55,7 +54,7 @@ SIP를 구성하고 있는 주요 요소는 다음과 같다:
 
 ## SIP의 구조
 
-SIP는 기본적으로 유사한 메세지를 구조를 가진다. 메세지는 일반적으로 다음과 같은 요소를 포함한다.
+SIP 메세지는 기본적으로 HTTP와 유사한 메세지를 구조를 가진다. 메세지는 일반적으로 다음과 같은 요소를 포함한다.
 
 - Start line
 - Message header

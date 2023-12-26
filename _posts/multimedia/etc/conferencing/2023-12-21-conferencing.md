@@ -1,6 +1,5 @@
 ---
 title: Conferencing
-author: YonghyunCho
 date: 2019-12-21 14:10:00 +0800
 categories: [Multimedia, ETC]
 tags: [multimedia]

@@ -1,6 +1,5 @@
 ---
 title: Overview (Streaming Protocols)
-author: YonghyunCho
 date: 2019-12-20 14:10:00 +0800
 categories: [Multimedia, Streaming Protocols]
 tags: [multimedia, streaming]

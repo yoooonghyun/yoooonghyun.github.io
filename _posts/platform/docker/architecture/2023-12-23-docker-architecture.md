@@ -1,6 +1,5 @@
 ---
 title: Architecture (Docker)
-author: YonghyunCho
 date: 2019-12-20 14:10:00 +0800
 categories: [Platforms, Docker]
 tags: [docker]

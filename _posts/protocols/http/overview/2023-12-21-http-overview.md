@@ -1,6 +1,5 @@
 ---
 title: Overview (HTTP)
-author: YonghyunCho
 date: 2019-12-21 14:10:00 +0800
 categories: [Protocols, HTTP]
 tags: [protocol, http]

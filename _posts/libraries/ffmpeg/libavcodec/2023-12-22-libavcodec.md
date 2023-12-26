@@ -1,6 +1,5 @@
 ---
 title: libavcodec
-author: YonghyunCho
 date: 2019-12-20 14:10:00 +0800
 categories: [Libraries, FFmpeg]
 tags: [ffmpeg]
