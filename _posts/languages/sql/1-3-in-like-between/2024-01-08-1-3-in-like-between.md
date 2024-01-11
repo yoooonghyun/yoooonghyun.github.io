@@ -1,6 +1,6 @@
 ---
 title: 1.3 In/Like/Between (SQL)
-date: 2023-12-25 14:10:00 +0800
+date: 2024-01-08 14:10:00 +0800
 categories: [Languages, SQL]
 tags: [database, sql]
 render_with_liquid: false
