@@ -14,7 +14,7 @@ mermaid: true
 먼저, COUNT 함수는 조회된 row의 수를 카운팅하는 함수다. 사용 방법은 다음과 같다:
 
 ``` sql
-SELECT COUNT(col_name) FROM table_name;
+SELECT COUNT(col_name) FROM tb_name;
 ```
 
 _Table 0: Customer Table_

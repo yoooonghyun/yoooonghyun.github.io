@@ -16,13 +16,13 @@ mermaid: true
 먼저, IN 구문에 대해 알아보자. 이 구문은 특정 컬럼이 여러 값 중 하나에 해당할 때 사용된다. 예를 들어, 여러 회원의 이름을 한 번에 조회하고 싶을 때를 생각해보면 아래와 같이 쿼리문을 작성할 수있다:
 
 ``` sql
-SELECT columns... FROM table_name WHERE col_name = val1 OR col_name = val2;
+SELECT columns... FROM tb_name WHERE col_name = val1 OR col_name = val2;
 ```
 
 이 구문을 IN을 이용하여 작성하면 다음과 같이 표현할 수 있다: 
 
 ``` sql
-SELECT columns... FROM table_name WHERE col_name IN (val1, val2);
+SELECT columns... FROM tb_name WHERE col_name IN (val1, val2);
 ```
 
 _Table 0: Customer Table_
@@ -53,13 +53,13 @@ SELECT * FROM customer WHERE name IN ('김철수', '김영희');
 이어서, BETWEEN 구문을 살펴보자. 이 구문은 특정 범위의 값, 예를 들어 날짜나 숫자 범위를 조회할 때 유용하다. 만약 특정 column이 일정 범위에 있는 데이터를 조회하려 할때는 다음과 같이 AND를 이용하여 표현할 수 있다.
 
 ``` sql
-SELECT columns... FROM table_name WHERE col_name <= val1 AND col_name >= val2;
+SELECT columns... FROM tb_name WHERE col_name <= val1 AND col_name >= val2;
 ```
 
 이 구문을 BETWEEN을 이용하여 작성하면 다음과 같이 표현할 수 있다: 
 
 ``` sql
-SELECT columns... FROM table_name WHERE col_name BETWEEN val1 AND val2;
+SELECT columns... FROM tb_name WHERE col_name BETWEEN val1 AND val2;
 ```
 
 Table 0을 예로 들어 3월 1일부터 4월 30일까지 가입한 회원을 조회하고 싶다면, BETWEEN 구문을 이용하여 이렇게 쿼리문을 작성할 수 있다:
@@ -84,7 +84,7 @@ BETWEEN은 시작 값과 끝 값 모두를 포함하는 범위를 지정한다�
 LIKE 를 이용한 쿼리는 다음과 같이 작성할 수 있다:
 
 ``` sql
-SELECT columns... FROM table_name WHERE col_name LIKE pattern;
+SELECT columns... FROM tb_name WHERE col_name LIKE pattern;
 ```
 
 ### LIKE pattern
