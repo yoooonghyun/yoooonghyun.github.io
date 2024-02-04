@@ -27,19 +27,19 @@ CREATE TABLE tb_name (
 
 _Table 0: Employee Table_
 
-| employee_id | name | created_at          | address           | email             |
-|-------------|------|---------------------|-------------------|-------------------|
-|      1      | 김철수 | 2023-01-01 00:00:00 | 서울 강남구 역삼동... | ironsoo@naver.com |
-|      2      | 이영희 | 2023-01-02 15:20:00 | 서울 강남구 서초동... | 202@gmail.com     |
-|      3      | 홍길동 | 2023-01-03 09:55:00 | 서울 서초구 잠원동... | hkd@gmail.com     |
+| employee_id | name | created_at          | email             |
+|-------------|------|---------------------|-------------------|
+|      1      | 김철수 | 2023-01-01 00:00:00 | ironsoo@naver.com |
+|      2      | 이영희 | 2023-01-02 15:20:00 | 202@gmail.com     |
+|      3      | 홍길동 | 2023-01-03 09:55:00 | hkd@gmail.com     |
 
 
 한번 CREATE TABLE구문을 이용하여 위에 보이는 Employee 테이블을 생성해 보자. Employee 테이블을 보면 다음과 같은 컬럼으로 구성을 가지고있다.
 
 - employee_id: 식별값 (PRIMARY KEY). 순차적으로 증가 (SERIAL).
 - created_at: 등록일시 (TIMESTAMP).
-- name: 직원의 이름 (TEXT).
-- email: 직원의 이메일 (TEXT). 유니크한 값 (UNIQUE).
+- name: 직원의 이름 (VARCHAR).
+- email: 직원의 이메일 (VARCHAR). 유니크한 값 (UNIQUE).
 
 모든 컬럼이 NULL을 허용하지 않는다할때 employee 테이블을 생성하는 쿼리문은 다음과 같다:
 
@@ -47,8 +47,8 @@ _Table 0: Employee Table_
 CREATE TABLE employee (
     employee_id SERIAL PRIMARY KEY,
     created_at TIMESTAMP NOT NULL,
-    name TEXT NOT NULL,
-    email TEXT UNIQUE NOT NULL);
+    name VARCHAR NOT NULL,
+    email VARCHAR UNIQUE NOT NULL);
 ```
 
 그리고 PK는 Table Constraint를 통해서도 지정할수 있다:
@@ -57,8 +57,8 @@ CREATE TABLE employee (
 CREATE TABLE employee (
     employee_id SERIAL,
     created_at TIMESTAMP NOT NULL,
-    name TEXT NOT NULL,
-    email TEXT UNIQUE NOT NULL,
+    name VARCHAR NOT NULL,
+    email VARCHAR UNIQUE NOT NULL,
     CONSTRAINT employee_pkey PRIMARY KEY (employee_id));
 ```
 
@@ -75,7 +75,7 @@ _Table 1: Job Table_
 
 - job_id: 식별값 (PRIMARY KEY), 순차적으로 증가 (SERIAL).
 - created_at: 등록일시 (TIMESTAMP).
-- name: 직책의 이름 (TEXT).
+- name: 직책의 이름 (VARCHAR).
 
 Job 테이블 또한 모든 컬럼이 NULL을 허용하지 않는다할 때 Job 테이블을 생성하는 쿼리문은 다음과 같다:
 
@@ -83,7 +83,7 @@ Job 테이블 또한 모든 컬럼이 NULL을 허용하지 않는다할 때 Job 
 CREATE TABLE job (
     job_id SERIAL PRIMARY KEY,
     created_at TIMESTAMP NOT NULL,
-    name TEXT NOT NULL);
+    name VARCHAR NOT NULL);
 ```
 
 ## Employee 테이블과 Job 테이블의 연결
@@ -95,7 +95,7 @@ CREATE TABLE job (
 _Table 2: EmployeeJob Table_
 
 | employee_id | job_id | hired_at |
-|--------|------|---------------------|
+|-------------|--------|----------|
 |||
 
 - employee_id: 직원의 식별값 (FOREIGN KEY). employee.employee_id 를 가리킴 (REFERENCES ...).
